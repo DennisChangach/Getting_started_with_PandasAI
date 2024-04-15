@@ -7,3 +7,4 @@ pyYAML
 langchain_google_genai
 google-generativeai
 python-dotenv
+xlrd
