@@ -27,5 +27,5 @@ Within the project directory, execute `streamlit run main.py` to launch the Stre
 - Ask questions about your data in the chat window. The app will analyze your data and respond to your questions with clear and informative answers.
 
 Additional Notes
-- You can read more on the project here: Medium Article
-- Here's the link to the app on Streamlit Cloud:
+- You can read more on the project here: [Medium Article]( https://bit.ly/3xNLWmE)
+- [Here's]( https://pandasai-chat.streamlit.app) the link to the app on Streamlit Cloud:
