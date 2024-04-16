@@ -1,6 +1,6 @@
 # Chat with Your Data using PandasAI and Streamlit
 This repository provides a Streamlit app that leverages PandasAI to enable you to have an interactive conversation with your data! Ask questions about your CSV or Excel files in plain English and get clear, actionable insights directly within the app.
-
+![image](https://github.com/DennisChangach/Getting_started_with_PandasAI/assets/41690660/f7c93754-65ca-4693-a628-bda2d18ed8a6)
 ## What is PandasAI?
 PandasAI seamlessly integrates with pandas, the go-to library for data manipulation in Python. It empowers you to interact with your data conversationally. Imagine asking questions like "What are the top 5 countries by sales?" or "Show me a scatter plot of customer age vs. purchase amount." PandasAI utilizes large language models (LLMs) to understand your natural language queries and then interacts with your data using pandas to deliver results.
 
