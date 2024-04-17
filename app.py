@@ -37,6 +37,9 @@ def main():
         
         #Adding users API Key
         user_api_key = st.text_input('Please add your API key',placeholder='Paste your API key here',type = 'password')
+        
+        #Get Pandas API key here
+        st.markdown("[Get Your PandasAI API key here](https://www.pandabi.ai/auth/sign-up)")
 
     if file_upload is not None:
         data  = extract_dataframes(file_upload)
@@ -45,13 +48,16 @@ def main():
                           )
         st.dataframe(data[df])
 
-        llm = get_LLM(llm_type,user_api_key)
         
-        #Instattiating PandasAI agent
-        analyst = get_agent(data,llm)
+        llm = get_LLM(llm_type,user_api_key)
 
-        #starting the chat with the PandasAI agent
-        chat_window(analyst)
+        if llm:
+            #Instattiating PandasAI agent
+            analyst = get_agent(data,llm)
+
+            #starting the chat with the PandasAI agent
+            chat_window(analyst)
+            
         
 
     else:
@@ -79,12 +85,12 @@ def get_LLM(llm_type,user_api_key):
                 # Configure the API key
                 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
                 
-            llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
+            llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3,google_api_key = user_api_key)
 
         return llm
     except Exception as e:
-        st.error(e)
-        st.error("No/Incorrect API key provided! Please verify your API key")
+        #st.error(e)
+        st.error("No/Incorrect API key provided! Please Provide/Verify your API key")
 
    
 
